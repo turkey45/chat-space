@@ -1,1 +1,105 @@
+    <div class="notification">
+      <div class="notice">メッセージ送信成功</div>
+    </div>
+    <div class="chat-side">
+       <div class="chat-side_user">
+        <div class="chat-side_user-content">
+          <div class="chat-side_user-name">
+                User Name
+          </div>
+                <a class="chat-side_user--new-group" href="/groups/new">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="chat-side_user--edit-user" href="/user/edit">
+        <i class="fa fa-cog"></i>
+      </a>
+       </div>
+      </div>
+    <div class="chat-side_groups">
+      <div class="chat-side_groups-list">
+        <a href="/groups/963/messages">
+          <div class="chat-side_group">
+            <div class="chat-side_group-name">
+              Test
+            </div>
+            <div class="chat-side_group-message">
+              test
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <div class="chat-main">
+     <div class="chat-main__header">
+      <div class="chat-main__header--group clearfix">
+        <div class="chat-main__header--group-name">
+          Test
+        </div>
+        <a class="chat-main__header--group-edit-btn" href="/groups/963/edit">Edit</a>
+      </div>
+      <div class="chat-main__header-members">
+        MEMBER:
+        <i>
+          User Name
+        </i>
+      </div>
+      </div>
+
+    <div class="chat-main__body">
+      <div class="chat-main__body--messages-list">
+        <div class="chat-main__message clearfix" data-id="1627">
+          <div class="chat-main__message-name">
+            User Name
+          </div>
+          <div class="chat-main__message-time">
+            2018/4/10 11:12:23
+          </div>
+          <div class="chat-main__message-body">
+          Test
+            <img class="chat-main__message-body-image"src()>
+          </div>
+        </div>
+
+          <div class="chat-main__message clearfix" data-id="16">
+          <div class="chat-main__message-name">
+            User Name
+          </div>
+          <div class="chat-main__message-time">
+            2018/4/10 11:12:23
+          </div>
+          <div class="chat-main__message-body">
+          Test
+            <img class="chat-main__message-body-image"src()>
+          </div>
+        </div>
+      </div>
+   </div>
+
+<div class='chat-main__footer'>
+ <form class="chat-main__footer-form" id="new_message" enctype="multipart/form-data" action="/groups/963/messages" accept-charset="UTF-8" method="post">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="hidden" name="authenticity_token" value="+qHg0OP3a1Kzn6YefODmTKJvaccxeykbNI7YHQd4GmN1tJyjbPf1Aw4TQ40vJiyg4l2fqgp3mabF65Fh79A78A==" />
+  <div class='chat-main__footer-body'>
+<input placeholder="type a message" class="message" type="text" name="message[body]" id="message_body" />
+<label class="chat-file" for="message_image">
+  <input class="image" type="file" name="message[image]" id="message_image" />
+<i class='fa fa-image'>
+</i>
+</label>
+</div>
+<input type="submit" name="commit" value="Send" class="submit" data-disable-with="Send" />
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
 
