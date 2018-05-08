@@ -1,29 +1,10 @@
-.chat-side
-  .chat-side_user
-    .chat-side_user-content
-      %h3.chat-side_user-name
-        = current_user.name
-    %ul.header__lists
-      %li.list1
-        = link_to do
-          = fa_icon 'pencil-square-o', class: 'icon'
-      %li.list2
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icon'
-  .chat-side_groups
-    .chat-side_groups-list
-      %a{:href => "/groups/963/messages"}
-        .chat-side_group
-          .chat-side_group-name
-            Test
-          .chat-side_group-message
-            test
+= render 'shared/side_bar', locals: { group: @group }
 .chat-main
   .chat-main__header
     .chat-main__header--group.clearfix
       .chat-main__header--group-name
         Test
-      %a.chat-main__header--group-edit-btn{:href => "/groups/963/edit"} Edit
+      %a.chat-main__header--group-edit-btn{:href => "/groups/1/edit"} Edit
     .chat-main__header-members
       MEMBER:
       %i
