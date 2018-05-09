@@ -36,39 +36,22 @@
   display: inline-block;
 }
 
-.chat-side_user--new-group {
-  color: #fff;
-  margin-left: 100px;
+.header__lists{
+.list1 {
+  margin: 50px 0px 0px 250px;
   position: relative;
   display: inline-block;
 }
 
-.chat-side_user--edit-user {
+.list2{
+  margin-left: 0px;
+  position: relative;
+  display: inline-block;
+ }
+}
+
+.icon {
   color: #fff;
-}
-.chat-side_groups {
-  height: 85%;
-  width: 100%;
-  background-color: #253141;
-}
-
-.chat-side_groups-list {
-  height: 100%;
-  color: #fff;
-}
-
-.chat-side_group {
-  padding: 20px;
-}
-
-.chat-side_group-name {
-  font-size: 15px;
-  color: #FFFFFF;
-}
-
-.chat-side_group-message {
-  font-size: 11px;
-  color: #FFFFFF;
 }
 
 .chat-main {
@@ -106,6 +89,7 @@
   margin: 28px 2px 0;
   border: 1px solid #38AEF0;
   float: right;
+  text-decoration: none;
 }
 
 .chat-main__header-members {
@@ -174,7 +158,6 @@
     border: none;
 }
 }
-
 
 
 .chat-main__footer-body .chat-file {
