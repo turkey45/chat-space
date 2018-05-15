@@ -4,7 +4,7 @@
     .chat-main__header--group.clearfix
       .chat-main__header--group-name
         = @group.name
-      %a.chat-main__header--group-edit-btn  Edit
+      %a.chat-main__header--group-edit-btn{:href => "/groups/1/edit"}  Edit
     .chat-main__header-members
       Member
       %i
@@ -14,7 +14,7 @@
   .chat-main__footer
     .form
       = form_for [@group, @message] do |f|
-        = f.text_field :content, class: 'form__message', placeholder: '    type a message  '
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
           = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon-1'
