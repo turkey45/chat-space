@@ -1,12 +1,13 @@
  .chat-side_groups {
-  height: 85%;
-  width: 100%;
-  background-color: #253141;
+    height: 85%;
+    padding: 0 20px;
+    background: #2f3e51;
+    overflow: auto;
 }
 
 .chat-side_groups-list {
-  padding-top: 10px;
-  color: #fff;
+       box-sizing: border-box;
+      padding: 20px 0 40px;
 }
 
 .chat-side_group-name {
@@ -17,8 +18,7 @@
 }
 
 .chat-side_group-message {
-  font-size: 16px;
-  color: #FFFFFF;
-  margin-bottom: 70px;
-  margin-left: 20px;
+        font-size: 11px;
+        margin-top: 5px;
+        color: #fff;
 }
