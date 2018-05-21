@@ -1,10 +1,9 @@
 = form_for @group do |f|
-  / renderのlocalsでgroupと定義しインスタンス変数を使わないようにしている
-  - if group.errors.any?
+  - if @group.errors.any?
     .chat-group-form__errors
-      %h2= "#{group.errors.full_messages.count}件のエラーが発生しました。"
+      %h2= "#{@group.errors.full_messages.count}件のエラーが発生しました。"
       %ul
-        - group.errors.full_messages.each do |message|
+        - @group.errors.full_messages.each do |message|
           %li= message
   .chat-group-form__field
     .chat-group-form__field--left
@@ -23,7 +22,7 @@
       = f.label :チャットメンバー, class: 'chat-group-form__label'
     .chat-group-form__field--right
       #chat-group-users
-        - group.users.each do |user|
+        - @group.users.each do |user|
           .chat-group-user.clearfix#chat-group-user-22
             = f.hidden_field :user_ids, value: current_user.id, multiple: true
             %p.chat-group-user__name
