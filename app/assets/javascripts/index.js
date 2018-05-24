@@ -38,11 +38,11 @@ $(function(){
             appendUser(user);
           });
         }else{
-          appendnoUser("一致する名前が存在しません。");
+          appendnoUser("一致する名前がありません。");
         }
       })
       .fail(function(){
-        alert("ユーザー検索に失敗しました。")
+        alert("ユーザーの検索に失敗しました。")
       })
     }else{
       $('.user-search-add').parent().remove();
@@ -52,12 +52,9 @@ $(function(){
   $('#user-search-result').on('click', '.user-search-add', function(){
     var user_id = $(this).data('user-id');
     var user_name = $(this).data('user-name');
-    // dataで取得する場合、「data-」以降を指定
     appendGroupUser(user_id, user_name);
     $(this).parent().remove();
-    //親要素の取得後それを削除
-    $('#user-search-field').val('');
-    //入力した文字を消す
+    $('#user-search-field').val('')
   });
 
   $('#chat-group-users').on('click', '.user-search-remove', function() {

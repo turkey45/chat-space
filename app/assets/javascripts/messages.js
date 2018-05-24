@@ -41,15 +41,15 @@ $(function(){
     }).fail(function(data){
      alert('error');
     })
-  })
+  });
 
    $(function(){
     setInterval(update, 5000);
   });
   function update(){
-    var url = location.href;
+    if(location.pathname.match(/\/groups\/\d+\/messages/))
     $.ajax({
-      url: url,
+      url: location.href,
       type: 'GET',
       dataType: 'json'
     })
@@ -63,12 +63,9 @@ $(function(){
         }
       });
     })
-    .fail(function() {
+    .fail(function(data) {
      alert('エラーのためメッセージの送信ができませんでした。');
     })
-    .always(function() {
-      $('.form__submit').prop('disabled', false);
-    });
   };
   });
 
