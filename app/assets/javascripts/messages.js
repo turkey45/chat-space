@@ -1,5 +1,6 @@
 $(function(){
   function buildHTML(message){
+    // HTMLを生成するための関数を決めている。messageは引数。
     if( message.image) {
       var image = `<img src="${message.image}" class="lower-message__image">`
     } else {
@@ -22,6 +23,7 @@ $(function(){
     return html;
 };
   $('#new_message').on('submit', function(e){
+    // $セレクタonでイベントを発火
     e.preventDefault();
     var href = $(this).attr('action');
     var formData = new FormData(this);
@@ -31,7 +33,7 @@ $(function(){
       data: formData,
       dataType: 'json',
       processData: false,
-      contentType: false
+      contentType: false,
    }).done(function(data){
       var html = buildHTML(data);
       $('.chat-main__body').append(html);
@@ -48,6 +50,7 @@ $(function(){
   });
   function update(){
     if(location.pathname.match(/\/groups\/\d+\/messages/))
+      // この画面でのみ適用。これがないと全ての画面でセットインターバルが起きてしまう
     $.ajax({
       url: location.href,
       type: 'GET',
