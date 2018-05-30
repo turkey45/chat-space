@@ -63,3 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'pry-rails'
   gem 'carrierwave'
   gem 'mini_magick'
+
+group :production do
+  gem 'unicorn'
+end
