@@ -4,11 +4,12 @@
     .chat-main__header--group.clearfix
       .chat-main__header--group-name
         = @group.name
-      %a.chat-main__header--group-edit-btn{:href => "/groups/1/edit"}  Edit
+      %a.chat-main__header--group-edit-btn{:href => "/groups/#{@group.id}/edit"}  Edit
     .chat-main__header-members
-      Member
+      Members:
       %i
-        = current_user.name
+        - @group.users.each do |user|
+          = user.name
   .chat-main__body
     = render @messages
   .chat-main__footer
@@ -20,8 +21,6 @@
             = fa_icon 'picture-o', class: 'icon-1'
             = f.file_field :image, class: 'hidden'
         = f.submit 'Send', class: 'form__submit'
-
-
 
 
 
